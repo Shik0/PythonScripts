@@ -9,7 +9,7 @@ def gcdIter(a, b):
     maxx = max(a,b)
     return max([x for x in range(maxx,0,-1) if a%x==0 and b%x==0])
     '''
-    #or by other way
+    #2nd solution
     while maxx > 0 :
         if a % maxx == 0 and b % maxx == 0:
             result = maxx
