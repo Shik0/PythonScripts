@@ -1,0 +1,26 @@
+############ find combo using python generators ############
+#or
+# "{:#^60}".format(" find combo using python generators ")
+#combo digits are between 0..9
+
+print() # skip first line
+
+#for the simple test purpose we mentioned plane text combo digits
+#but for production scenarious use encryption
+correct_combo = (4,6,7)
+
+count = 0 # to count 
+
+# define function to yield combo digits
+def combo_generator():
+    for n1 in range(10):
+        for n2 in range(10):
+            for n3 in range(10):
+                yield (n1,n2,n3)
+
+#though for loop check and find correct combo set
+for (n1,n2,n3) in combo_generator():
+    count += 1
+    if (n1,n2,n3) == correct_combo:
+        print("Correct combo is {}, attemps {} ". format((n1,n2,n3), count))
+        break
