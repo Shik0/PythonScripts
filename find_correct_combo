@@ -15,7 +15,7 @@ print() # skip first line
 #but for production scenarious use encryption
 correct_combo = (4,6,7)
 
-count = 0 # to count 
+count = 0 # to count attemps
 
 # define function to yield combo digits
 def combo_generator():
